@@ -6,12 +6,7 @@
     "build-ts": "tsc -d",
     "coverage": "npm run build && jest ./dist/test/**/*.js --coverage --forceExit",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
-    "prepublishOnly": "tsc -d -p ./ --outDir dist",
-    "integration": "npm run integration-build && npm run integration-lint && npm run integration-test",
-    "integration-build": "npm run build && cd ./integration && tsc -d && cd ..",
-    "integration-lint": "cd ./integration && tslint -c tslint.json -p tsconfig.json && cd ..",
-    "integration-test": "jest ./integration/test --forceExit",
-    "test": "npm run coverage && npm run integration"
+    "test": "npm run coverage"
   },
   "jest": {
     "globals": {
@@ -41,6 +36,8 @@
     "najs-binding": "^1.7.0"
   },
   "dependencies": {
+    "@types/benchmark": "^1.0.31",
+    "benchmark": "^2.1.4",
     "chance": "^1.0.13",
     "knex": "^0.14.4",
     "lodash": "^4.17.4",
