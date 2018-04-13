@@ -1,5 +1,3 @@
-declare const console: any
-
 function createDynamicPropertyDescriptor(name: string): PropertyDescriptor {
   return {
     get(this: any) {
@@ -75,3 +73,50 @@ user['attributes'] = { name: 'test' }
 console.log(user['__controls'])
 console.log(userTwo['__controls'])
 console.log(user.name)
+
+// interface IModel {
+//   // Fillable: 8 functions
+//   getFillable(): void
+//   getGuarded(): void
+//   fill(): void
+//   forceFill(): void
+//   isFillable(): void
+//   isGuarded(): void
+//   markFillable(): void
+//   markGuarded(): void
+
+//   // Attribute: 6 functions
+//   getAttribute(): void
+//   setAttribute(): void
+//   hasAttribute(): void
+//   getPrimaryKey(): void
+//   setPrimaryKey(): void
+//   getPrimaryKeyName(): void
+
+//   // Serialize: 9 functions
+//   getVisible(): void
+//   getHidden(): void
+//   isVisible(): void
+//   isHidden(): void
+//   toObject(): void
+//   toJSON(): void
+//   toJson(): void
+//   markVisible(): void
+//   markHidden(): void
+
+//   // ActiveRecord: 4 functions
+//   save(): void
+//   delete(): void
+//   forceDelete(): void
+//   fresh(): void
+
+//   // Timestamps: 1 function
+//   touch(): void
+
+//   // SoftDeletes: 1 function
+//   restore(): void
+
+//   // Model: 2 function
+//   is(): void
+//   isDirty(): void
+// }
